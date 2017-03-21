@@ -61,7 +61,7 @@ ggraph(measles_net) +
 test_error()
 ```
 
---- type:NormalExercise lang:r
+--- type:NormalExercise lang:r key:cc2b65a2f6
 ## Add vertex attributes and map them to aesthetics in `ggraph`
 
 *** =instructions
