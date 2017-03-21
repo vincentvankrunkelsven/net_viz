@@ -1,7 +1,7 @@
-title            : Visualizing relational data with `ggraph`
+title            : Visualizing relational data with ggraph
 instructors      :
  - nicksolomon10@gmail.com
-description      : The `ggraph` package brings `ggplot2` like syntax to network visualizations.
+description      : The ggraph package brings ggplot2 like syntax to network visualizations.
 university       : DataCamp
 difficulty_level : 1
 time_needed      : 1 hour
