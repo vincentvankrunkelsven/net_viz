@@ -24,6 +24,7 @@ Read the docs
 library(igraph)
 library(surveillance)
 library(ggraph)
+library(dplyr)
 data("hagelloch")
 ```
 
