@@ -60,3 +60,75 @@ ggraph(measles_net) +
 ```{r}
 test_error()
 ```
+
+--- type:NormalExercise lang:r
+## Add vertex attributes and map them to aesthetics in `ggraph`
+
+*** =instructions
+- Use the `vertex_attr()` function from the `igraph` package to add the
+vertex attributes `class` and `num_infected` to each vertex of the graph you
+made in the previous exercise. The attribute `class` corresponds to the column `CL` of the `hagelloch.df` data frame. To compute the number of infected individuals, use the function `degree()` with argument `mode = "in"`.
+
+- Plot this graph with `num_infected` mapped to node size and `class` mapped to
+node color.
+
+*** =hint
+Use the familiar `ggplot` syntax to access vertex attributes.
+
+*** =pre_exercise_code
+```{r}
+library(igraph)
+library(surveillance)
+library(ggraph)
+library(dplyr)
+
+data("hagelloch")
+hagelloch.df <- mutate(hagelloch.df, CL = as.character(CL))
+```
+
+*** =sample_code
+```{r}
+my_arrow = arrow(length = unit(5, "mm"), type = "closed")
+
+measles_net <- hagelloch.df %>% 
+  select(PN, IFTO) %>%
+  filter(IFTO != -1) %>% 
+  as.matrix() %>% 
+  graph_from_edgelist()
+
+# add the vertex attribute class
+vertex_attr(measles_net, ____) <- ____
+
+# add the vertex attribute num_infected
+vertex_attr(measles_net, ____) <- ____
+
+# plot this graph
+ggraph(measles_net)
+```
+
+*** =solution
+```{r}
+my_arrow = arrow(length = unit(5, "mm"), type = "closed")
+
+measles_net <- hagelloch.df %>% 
+  select(PN, IFTO) %>%
+  filter(IFTO != -1) %>% 
+  as.matrix() %>% 
+  graph_from_edgelist()
+
+# add the vertex attribute class
+vertex_attr(measles_net, "class") <- hagelloch.df[["CL"]]
+
+# add the vertex attribute num_infected
+vertex_attr(measles_net, "num_infected") <- degree(measles_net, mode = "in")
+
+# plot this graph
+ggraph(measles_net) +
+  geom_edge_link() +
+  geom_node_point(aes(color = class, size = num_infected))
+```
+
+*** =sct
+```{r}
+test_error()
+```
