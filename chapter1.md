@@ -3,7 +3,7 @@ title       : Visualizing relational data with `ggraph`
 description : The `ggraph` package brings `ggplot2` like syntax to network visualizations.
 attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
----type:NormalExercise lang:r
+--- type:NormalExercise lang:r key:1085797f84
 ## Create an `igraph` object and plot it
 
 We'll be using the `hagelloch.df` dataframe from the `surveillance` package to
