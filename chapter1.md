@@ -132,3 +132,31 @@ ggraph(measles_net) +
 ```{r}
 test_error()
 ```
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:c33d19efe0
+## Testing Vincent
+
+
+*** =instructions
+
+*** =hint
+
+*** =pre_exercise_code
+```{r}
+
+```
+
+*** =sample_code
+```{r}
+
+```
+
+*** =solution
+```{r}
+
+```
+
+*** =sct
+```{r}
+
+```
