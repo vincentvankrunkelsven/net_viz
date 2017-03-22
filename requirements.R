@@ -1,4 +1,5 @@
 install.packages("igraph")
-install.packages("ggraph", dependencies = TRUE)
+install.packages("ggforce")
+install.packages("ggraph")
 install.packages("surveillance")
 install.packages("dplyr")
