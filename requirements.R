@@ -1,3 +1,3 @@
 install.packages("igraph")
-install.packages("ggraph")
 install.packages("surveillance")
+devtools::install_github('thomasp85/ggraph')
