@@ -1,4 +1,6 @@
 install.packages("igraph")
+install.packages("udunits2")
+install.packages("units")
 install.packages("ggforce")
 install.packages("ggraph")
 install.packages("surveillance")
