@@ -1,25 +1,32 @@
 ---
-title       : Visualizing relational data with `ggraph`
-description : The `ggraph` package brings `ggplot2` like syntax to network visualizations.
-attachments :
-  slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
---- type:NormalExercise lang:r key:1085797f84
+title: 'Visualizing relational data with `ggraph`'
+description: 'The `ggraph` package brings `ggplot2` like syntax to network visualizations.'
+attachments: {}
+---
+
 ## Create an `igraph` object and plot it
+
+```yaml
+type: NormalExercise
+key: 1085797f84
+lang: r
+xp: 100
+```
 
 We'll be using the `hagelloch.df` dataframe from the `surveillance` package to
 create a graph of the transmission of a measles outbreak.
 
-*** =instructions
+`@instructions`
 - Use the patient ID number (`PN`) column and the putative source of infection
 (`IFTO`) column to make an `igraph` object where the vertices are patients and
 the edges show who infected who.
 
 - Plot this graph using `ggraph` with straight edges and points for nodes.
 
-*** =hint
+`@hint`
 Read the docs
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{r}
 library(igraph)
 library(surveillance)
@@ -28,7 +35,7 @@ library(dplyr)
 data("hagelloch")
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 my_arrow = arrow(length = unit(5, "mm"), type = "closed")
 
@@ -39,7 +46,7 @@ measles_net <- ___
 ggraph(___)
 ```
 
-*** =solution
+`@solution`
 ```{r}
 my_arrow = arrow(length = unit(2, "mm"), type = "closed")
 
@@ -56,25 +63,37 @@ ggraph(measles_net) +
   geom_node_point()
 ```
 
-*** =sct
+`@sct`
 ```{r}
 test_error()
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:c33d19efe0
+---
+
 ## Testing Vincent
 
+```yaml
+type: NormalExercise
+key: c33d19efe0
+lang: r
+xp: 100
+skills: 1
+```
 
-*** =instructions
 
-*** =hint
 
-*** =pre_exercise_code
+`@instructions`
+
+
+`@hint`
+
+
+`@pre_exercise_code`
 ```{r}
 
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 library(igraph)
 library(surveillance)
@@ -96,12 +115,12 @@ ggraph(measles_net) +
   geom_node_point()
 ```
 
-*** =solution
+`@solution`
 ```{r}
 
 ```
 
-*** =sct
+`@sct`
 ```{r}
 
 ```
